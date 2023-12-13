@@ -1,0 +1,363 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.33f1 (ee5a2aa03ab2) revision 15620650'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'en' Physical Memory: 16321 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.33f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+C:/Users/olibu/Unity/Unity-Project---GoblinMode-Working-main/GoblinMode Project
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+52648
+Successfully changed project path to: C:/Users/olibu/Unity/Unity-Project---GoblinMode-Working-main/GoblinMode Project
+C:/Users/olibu/Unity/Unity-Project---GoblinMode-Working-main/GoblinMode Project
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [25632] Host "[IP] 192.168.0.45 [Port] 0 [Flags] 2 [Guid] 1905736699 [EditorId] 1905736699 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-SAI1PM5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [25632] Host "[IP] 192.168.0.45 [Port] 0 [Flags] 2 [Guid] 1905736699 [EditorId] 1905736699 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-SAI1PM5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with {0} workers.
+Refreshing native plugins compatible for Editor in 88.28 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.33f1 (ee5a2aa03ab2)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.33f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/olibu/Unity/Unity-Project---GoblinMode-Working-main/GoblinMode Project/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f08)
+    Vendor:   NVIDIA
+    VRAM:     5969 MB
+    Driver:   31.0.15.4584
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.33f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.33f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.33f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56972
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.33f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003820 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 85.97 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.591 seconds
+Domain Reload Profiling:
+	ReloadAssembly (591ms)
+		BeginReloadAssembly (81ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (425ms)
+			LoadAssemblies (79ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (96ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (24ms)
+			SetupLoadedEditorAssemblies (269ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (86ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (132ms)
+				ProcessInitializeOnLoadMethodAttributes (43ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006985 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 93.04 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Completed reload, in  1.454 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1454ms)
+		BeginReloadAssembly (124ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (1217ms)
+			LoadAssemblies (97ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (239ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (810ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (93ms)
+				BeforeProcessingInitializeOnLoad (92ms)
+				ProcessInitializeOnLoadAttributes (581ms)
+				ProcessInitializeOnLoadMethodAttributes (34ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.84 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3841 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 36 unused Assets / (46.7 KB). Loaded Objects now: 4301.
+Memory consumption went from 147.9 MB to 147.9 MB.
+Total: 4.164100 ms (FindLiveObjects: 0.439600 ms CreateObjectMapping: 0.105900 ms MarkObjects: 3.497300 ms  DeleteObjects: 0.119300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:CustomObjectIndexerAttribute: bc11b3a6c3213fcdd17b65e7da85e133 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 433361.429432 seconds.
+  path: Assets/tileMap/sheet_82.asset
+  artifactKey: Guid(63294e5f65269074cabb36a7a6814e80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_82.asset using Guid(63294e5f65269074cabb36a7a6814e80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2968ec79ce963a0f6189c0ebbeb6e4d7') in 0.090645 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/tileMap/sheet_83.asset
+  artifactKey: Guid(c03928d020ac2284f87e720e7bf39bce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_83.asset using Guid(c03928d020ac2284f87e720e7bf39bce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1aae9039c6aecc1d6e27b3399f92fde') in 0.025755 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/tileMap/sheet_97.asset
+  artifactKey: Guid(e2b16ba9b392ce342b59b9637a3939bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_97.asset using Guid(e2b16ba9b392ce342b59b9637a3939bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e89aea0b1adceb805bca3a69ea39288a') in 0.023386 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/tileMap/sheet_89.asset
+  artifactKey: Guid(f758189c3750d8a4dbd662445b2f363d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_89.asset using Guid(f758189c3750d8a4dbd662445b2f363d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea9f443303ab49a5ad8f16be5bc1de2e') in 0.013262 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/tileMap/sheet_94.asset
+  artifactKey: Guid(071c50a29c3958d41b54a6b5fade053e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_94.asset using Guid(071c50a29c3958d41b54a6b5fade053e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6f07b15943ab05ae23932b8af838eb5') in 0.023891 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/tileMap/sheet_100.asset
+  artifactKey: Guid(44080275722c4fa47a67f16bf17c74e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_100.asset using Guid(44080275722c4fa47a67f16bf17c74e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b9f5408be9099c5b215449e5a12cfbd') in 0.022953 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/tileMap/sheet_105.asset
+  artifactKey: Guid(3c1475f94cf244d45b02639e99657eda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_105.asset using Guid(3c1475f94cf244d45b02639e99657eda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b960fab2d12674411d9fe700027b1b93') in 0.021818 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/tileMap/sheet_118.asset
+  artifactKey: Guid(7296a15785550674ea5aeeb8dd0d8bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_118.asset using Guid(7296a15785550674ea5aeeb8dd0d8bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b92fd8fc995be3e29bf4470a3590336e') in 0.021834 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/tileMap/sheet_123.asset
+  artifactKey: Guid(9e07e4dce6bf168459805dafe32ac76d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_123.asset using Guid(9e07e4dce6bf168459805dafe32ac76d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '936a03022db26a2ada18e9ee972ba7ca') in 0.022262 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/tileMap/sheet_127.asset
+  artifactKey: Guid(1f18230b03cd0c143996a4f8ac7e7c59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_127.asset using Guid(1f18230b03cd0c143996a4f8ac7e7c59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4a22ba28151589c026a2d038d0fff5b') in 0.022106 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/tileMap/sheet_126.asset
+  artifactKey: Guid(94e5af7260e4b704e9dca60f38e0e944) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_126.asset using Guid(94e5af7260e4b704e9dca60f38e0e944) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cf4121b6ce52f29b40ee2cb1d2cef44') in 0.021472 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/tileMap/sheet_112.asset
+  artifactKey: Guid(a499bf0d15681ff43ba46db81b0e9a85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_112.asset using Guid(a499bf0d15681ff43ba46db81b0e9a85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9757f710434ee4d90a44eb7ad83ac59') in 0.011984 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/tileMap/sheet_103.asset
+  artifactKey: Guid(de6a45e0b92b8ca43b401474f45c5f96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_103.asset using Guid(de6a45e0b92b8ca43b401474f45c5f96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd95f45cf5fd33d653f859bcb619216a') in 0.021248 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/tileMap/sheet_121.asset
+  artifactKey: Guid(4c6041c7ff0cd8348adc4f64421cf20b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_121.asset using Guid(4c6041c7ff0cd8348adc4f64421cf20b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d6f6cdd14ab5450b077d18241847628') in 0.022313 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/tileMap/sheet_88.asset
+  artifactKey: Guid(9ee482025d79ff942ac64c9e53733597) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_88.asset using Guid(9ee482025d79ff942ac64c9e53733597) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b72e49b4a6efe0feafa9314ebca8617') in 0.012955 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/tileMap/sheet_84.asset
+  artifactKey: Guid(a6ec97c0205f47f409f6e1b693f00b6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_84.asset using Guid(a6ec97c0205f47f409f6e1b693f00b6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '158a169c3e719fb184f4adf9980414bc') in 0.024920 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/tileMap/sheet_109.asset
+  artifactKey: Guid(9b4e3100aba5bf041b7a40bf0dec6091) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_109.asset using Guid(9b4e3100aba5bf041b7a40bf0dec6091) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2a62afc9d46e807b36f40c959edfabb') in 0.011708 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/tileMap/sheet_110.asset
+  artifactKey: Guid(e0550066b303c224cb2b1330c7713d8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_110.asset using Guid(e0550066b303c224cb2b1330c7713d8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fbb123aac21f8e98de19b2885c5efbb') in 0.012536 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/tileMap/sheet_101.asset
+  artifactKey: Guid(eadd055e09589b646bc79be14030e70e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_101.asset using Guid(eadd055e09589b646bc79be14030e70e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b63dadc3cc1a77cce91c7c90cc759227') in 0.021133 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/tileMap/sheet_102.asset
+  artifactKey: Guid(c36e4ca2e879cde4185c696d33e1f95b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_102.asset using Guid(c36e4ca2e879cde4185c696d33e1f95b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '646b7db67d1c214d7220a3efc4be5c9b') in 0.022728 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/tileMap/sheet_114.asset
+  artifactKey: Guid(793e4b7650770ef4f9ae8e7467fbd391) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_114.asset using Guid(793e4b7650770ef4f9ae8e7467fbd391) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ba65d3c1c3a9b6041ab820000cb4cf5') in 0.024477 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/tileMap/sheet_113.asset
+  artifactKey: Guid(d1262ee4869ed7841a3f659994922509) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_113.asset using Guid(d1262ee4869ed7841a3f659994922509) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26114f271b0313f798617dd146e117c0') in 0.011296 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/tileMap/sheet_104.asset
+  artifactKey: Guid(b0bbb19f605c4834db914ffcee418119) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_104.asset using Guid(b0bbb19f605c4834db914ffcee418119) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f5ee658c52a7107dfcdc78641ab66a8') in 0.022244 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/tileMap/sheet_90.asset
+  artifactKey: Guid(a16b7194735af854c88cce46f7fb7e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/tileMap/sheet_90.asset using Guid(a16b7194735af854c88cce46f7fb7e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '308110639dde362feb897a5ea5d0a43b') in 0.013051 seconds 
+Number of asset objects unloaded after import = 3
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

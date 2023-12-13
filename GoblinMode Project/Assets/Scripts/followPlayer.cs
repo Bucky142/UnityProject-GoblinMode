@@ -16,12 +16,9 @@ public class followPlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector2 playerPosition = playerTransform.position;
-
-
-        
 
         float horizontalDirection = (playerTransform.position.x - transform.position.x);
         float scaledHorizontalDirection = (horizontalDirection / ((int)horizontalDirection.ToString().Length * 10));
@@ -34,4 +31,15 @@ public class followPlayer : MonoBehaviour
 
         goblinRigidBody2D.velocity = movementVector * movementSpeed;
     }
+
+
+    //void FixedUpdate()
+    //{
+    //    Vector2 playerPosition = playerTransform.position;
+    //    Vector2 goboPosition = transform.position;
+
+    //    Vector2 movementVector = (playerPosition - goboPosition).normalized;
+
+    //    goblinRigidBody2D.velocity = movementVector * movementSpeed; 
+    //}
 }

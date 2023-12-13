@@ -5,16 +5,14 @@ using UnityEngine;
 
 public class SwordVelocity : MonoBehaviour
 {
-    Vector3 OriginalPosition;
-    public int magnitudeOfVelocity;
+    private Vector3 OriginalPosition;
     public Vector2 swordVector;
+    public int magnitudeOfVelocity;
     private GameObject player;
 
     public Sprite swordSprite0;
-    public Sprite swordSprite1;
     public Sprite swordSprite2;
     public Sprite swordSprite3;
-    public Sprite swordSprite4;
 
     public SpriteRenderer spriteRenderer;
 
@@ -22,27 +20,26 @@ public class SwordVelocity : MonoBehaviour
     {
         player = GameObject.Find("Knight");
     }
-    // Update is called once per frame
+ 
     void FixedUpdate()
     {
+        // Calculates sword speed
         swordVector = (transform.position - OriginalPosition).normalized;
 
         magnitudeOfVelocity = (int)((transform.position - OriginalPosition).magnitude / Time.deltaTime);
 
         OriginalPosition = transform.position;
 
-        UpdateAnimation();
-
-        
+        UpdateAnimation();   
     }
 
     void UpdateAnimation()
     {
+        // Changes sword sprite - based on sword speed 
         if (magnitudeOfVelocity < 10 )
         {
             spriteRenderer.sprite = swordSprite0;
-        }
-        
+        }      
         if ((magnitudeOfVelocity >= 20))
         {
             spriteRenderer.sprite = swordSprite2;
@@ -51,13 +48,10 @@ public class SwordVelocity : MonoBehaviour
         {
             spriteRenderer.sprite = swordSprite3;
         }
-        //if ((magnitudeOfVelocity >= 2) && (magnitudeOfVelocity < 5))
-        //{
-        //    spriteRenderer.sprite = swordSprite4;
-        //}
-
+        
+        // Flips sword sprite to face direction of motion 
         float playerToSword = transform.position.y - player.transform.position.y;
-
+        
         if (playerToSword < -1)
         {
             if (magnitudeOfVelocity >= 10)

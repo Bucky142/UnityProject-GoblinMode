@@ -9,8 +9,8 @@ public class Death : MonoBehaviour
     public GameObject healthBar;
     public HealthBar healthBarScript;
 
-    public ParticleSystem blood;
-    public GameObject bloodParticles;
+    public ParticleSystem bloodParticles;
+    public GameObject bloodObject;
 
     private GameObject sword;
 
@@ -31,8 +31,8 @@ public class Death : MonoBehaviour
 
         sword = GameObject.Find("Sword");
 
-        bloodParticles = GameObject.Find("Blood Particles");
-        blood = bloodParticles.GetComponent<ParticleSystem>();
+        bloodObject = GameObject.Find("Blood Particles");
+        bloodParticles = bloodObject.GetComponent<ParticleSystem>();
 
         
     }
@@ -60,27 +60,20 @@ public class Death : MonoBehaviour
             if (health <= 0)
             {
                 GoblinSFX.DeathSFX();
-                
-                
             }
-
         }
 
     }
 
     private void takeDamage(float damage)
     {
-        blood.transform.position = transform.position;
-        blood.Play();
+        bloodObject.transform.position = transform.position;
+        bloodParticles.Play();
 
         health -= damage;
         healthBarScript.SetHealth(health);
 
         GoblinSFX.HitSFX();
-
-
-
-
     }
 
 

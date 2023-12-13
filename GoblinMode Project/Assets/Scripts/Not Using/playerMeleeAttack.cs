@@ -4,59 +4,59 @@ using UnityEngine;
 
 public class playerMeleeAttack : MonoBehaviour
 {
-    //GameObject weaponHitBox;
-    //public float angle = 100f;
-    //private GameObject swordPivot;
-    //public int rotaionSpeed = 1;
+    GameObject weaponHitBox;
+    public float angle = 100f;
+    private GameObject swordPivot;
+    public int rotaionSpeed = 1;
 
-    //// Start is called before the first frame update
-    //void Start()
-    //{
-    //    weaponHitBox = GameObject.Find("weaponHitBox");
-    //    weaponHitBox.SetActive(false);
-    //    swordPivot = GameObject.Find("SwordPivot");
+    // Start is called before the first frame update
+    void Start()
+    {
+        weaponHitBox = GameObject.Find("weaponHitBox");
+        weaponHitBox.SetActive(false);
+        swordPivot = GameObject.Find("SwordPivot");
 
-    //}
+    }
 
-    //// Update is called once per frame
-    //void  Update()
-    //{
-        
-    //    if (Input.GetMouseButtonDown(0))
-    //    {
-    //        // when m1 is clicked 
+    // Update is called once per frame
+    void Update()
+    {
 
-    //        // stop rotaion of weapon
-    //        //Quaternion rotationVector = Quaternion.AngleAxis(angle - 90f, Vector3.forward);
+        if (Input.GetMouseButtonDown(0))
+        {
+            // when m1 is clicked 
 
-    //        //swordPivot.transform.rotation = Quaternion.Slerp(swordPivot.transform.rotation, rotationVector, rotaionSpeed * Time.deltaTime);
+            // stop rotaion of weapon
+            //Quaternion rotationVector = Quaternion.AngleAxis(angle - 90f, Vector3.forward);
 
-    //        //StartCoroutine(Sleep(1));
+            //swordPivot.transform.rotation = Quaternion.Slerp(swordPivot.transform.rotation, rotationVector, rotaionSpeed * Time.deltaTime);
 
-    //        //Quaternion rotationVector2 = Quaternion.AngleAxis((angle * 3) - 90f, Vector3.forward);
+            //StartCoroutine(Sleep(1));
 
-    //        //swordPivot.transform.rotation = Quaternion.Slerp(swordPivot.transform.rotation,rotationVector2 , rotaionSpeed * 3 * Time.deltaTime);
+            //Quaternion rotationVector2 = Quaternion.AngleAxis((angle * 3) - 90f, Vector3.forward);
+
+            //swordPivot.transform.rotation = Quaternion.Slerp(swordPivot.transform.rotation,rotationVector2 , rotaionSpeed * 3 * Time.deltaTime);
 
 
-    //        weaponHitBox.SetActive(true);
-    //        StartCoroutine(Sleep(2));
-            
-    //    }
+            weaponHitBox.SetActive(true);
+            StartCoroutine(Sleep(2));
 
-        
+        }
 
-       
-    //}
-    //IEnumerator Sleep(int time)
-    //{
-    //   yield return new WaitForSeconds(time);
-    //   Deactivate();
-    //}
 
-    //void Deactivate()
-    //{
-    //    weaponHitBox.SetActive(false);
-    //}
+
+
+    }
+    IEnumerator Sleep(int time)
+    {
+        yield return new WaitForSeconds(time);
+        Deactivate();
+    }
+
+    void Deactivate()
+    {
+        weaponHitBox.SetActive(false);
+    }
 }
 
 

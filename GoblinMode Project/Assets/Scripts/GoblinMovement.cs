@@ -22,17 +22,17 @@ public class GoblinMovement : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
+    
     void FixedUpdate()
     {
-        
-
         movementVector = FindMovementVector();
         
         Vector2 moveForce = movementVector * movementSpeed;
+
+        // Handles forces that apply to the player -- "KnockBack" and "Abilities" 
         moveForce += forceToApply;
         forceToApply /= forceDamping;
-
+        
         if (forceToApply.magnitude <= 0.01f)
         {
             forceToApply = Vector2.zero;
@@ -40,7 +40,6 @@ public class GoblinMovement : MonoBehaviour
         goblinRigidBody2D.velocity = moveForce; 
 
         LookDirection(movementVector);
-
     }
 
     
@@ -57,30 +56,13 @@ public class GoblinMovement : MonoBehaviour
     }
     
     Vector2 FindMovementVector()
-    {
+    {   
         Vector2 playerPosition = playerTransform.position;
 
         Vector2 goboPosition = transform.position;
 
-        //this can be calculated much more simply and fixed the problem of the enemies moveing faster the further away they are from the player
-                //float horizontalDirection = (playerTransform.position.x - transform.position.x);
-                //float scaledHorizontalDirection = (horizontalDirection / ((int)horizontalDirection.ToString().Length * 10));
-
-                //float verticalDirection = (playerTransform.position.y - transform.position.y);
-                //float scaledVerticalDirection = (verticalDirection / ((int)verticalDirection.ToString().Length * 10));
-                
-                //movementVector = new Vector2(scaledHorizontalDirection, scaledVerticalDirection);
-
-        //better version
-
         movementVector = (playerPosition - goboPosition).normalized;
 
-        
-
         return movementVector;
-
-
-
-
     }
 }

@@ -12,9 +12,7 @@ public class playerMovemtn : MonoBehaviour
     public int dashPower;
     public Vector2 forceToApply;
     private float forceDamping = 1.2f;
-
-
-    [SerializeField] private float movementSpeed = 5f; 
+    public float movementSpeed = 5f; 
 
     // Start is called before the first frame update
     void Start()
@@ -23,16 +21,17 @@ public class playerMovemtn : MonoBehaviour
         crosshair = GameObject.Find("Crosshair");
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
+        // Handles base movement 
         Vector2 movementVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
-
         Vector2 moveForce = movementVector * movementSpeed;
+
+        // Handles forces that apply to the player -- "KnockBack" and "Abilities" 
         moveForce += forceToApply;
         forceToApply /= forceDamping;
 
-        if (forceToApply.magnitude > 0.01f)
+        if (forceToApply.magnitude <= 0.01f)
         {
             forceToApply = Vector2.zero;
         }
@@ -44,6 +43,7 @@ public class playerMovemtn : MonoBehaviour
 
     void Update()
     {
+        // Player dash
         if (Input.GetKeyDown("space"))
         {
             Vector2 crosshairVector = (crosshair.transform.position - transform.position).normalized;
@@ -54,8 +54,11 @@ public class playerMovemtn : MonoBehaviour
 
     void UpdateAnimation(Vector2 movementVector, float horizontalMovementInput)
     {
+        // Updates value in Player animation controller
+        // If player is moveing then play run animation 
         animator.SetFloat("Speed", Mathf.Abs(movementVector.magnitude));
 
+        // Faces the player in the direction of movement 
         if (horizontalMovementInput < 0)
         {
             sprite.flipX = true;
