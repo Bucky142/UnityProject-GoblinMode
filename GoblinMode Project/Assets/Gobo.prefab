@@ -182,8 +182,8 @@ MonoBehaviour:
   maxHealth: 0
   healthBar: {fileID: 0}
   healthBarScript: {fileID: 0}
-  blood: {fileID: 0}
   bloodParticles: {fileID: 2138360959329581921, guid: bcb554fe622b24848bfaf8dafa45c97b, type: 3}
+  bloodObject: {fileID: 0}
 --- !u!114 &632431088472682344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,7 +312,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 126
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
