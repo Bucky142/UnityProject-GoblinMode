@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
+
+
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -24,12 +30,16 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
+
+
     }
 
     private void PauseGame()
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0;
+
+        UnityEngine.Cursor.visible = true;
     }
 
     public void QuitButton()
