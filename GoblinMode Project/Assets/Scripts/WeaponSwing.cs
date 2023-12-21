@@ -23,7 +23,7 @@ public class WeaponSwing : MonoBehaviour
         Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         Vector2 playerTransform2D = transform.position;
         
-        // Ingame cursor
+        // In-game cursor
         crosshair.transform.position = cursorPosition + playerTransform2D;
         // Auto swing sowrd 
         if (Input.GetMouseButton(1))
