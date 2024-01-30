@@ -108464,6 +108464,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc8e1e7968bbf984e8bac32cfcdf68ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goblinRigidBody2D: {fileID: 0}
+  playerTransform: {fileID: 0}
+  movementSpeed: 1000
 --- !u!4 &1846699772
 Transform:
   m_ObjectHideFlags: 0

@@ -12,8 +12,6 @@ public class Death : MonoBehaviour
     public ParticleSystem bloodParticles;
     public GameObject bloodObject;
 
-    private GameObject sword;
-
     private GoblinSFX GoblinSFX;
 
     private GameObject killCountPanel;
@@ -32,8 +30,6 @@ public class Death : MonoBehaviour
         health = maxHealth;
         healthBarScript.SetMaxHealth(maxHealth);
 
-        sword = GameObject.Find("Sword");
-
         bloodObject = GameObject.Find("Blood Particles");
         bloodParticles = bloodObject.GetComponent<ParticleSystem>();
 
@@ -45,7 +41,7 @@ public class Death : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        // handles damage and enemy death
         if (collision.gameObject.tag == "hitBox")
         {
 
@@ -72,12 +68,13 @@ public class Death : MonoBehaviour
 
     private void takeDamage(float damage)
     {
+        //generates blood 
         bloodObject.transform.position = transform.position;
         bloodParticles.Play();
-
+        //manages health
         health -= damage;
         healthBarScript.SetHealth(health);
-
+        //manages hit sound
         GoblinSFX.HitSFX();
     }
 

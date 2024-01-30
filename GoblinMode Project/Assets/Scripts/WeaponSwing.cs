@@ -38,10 +38,11 @@ public class WeaponSwing : MonoBehaviour
         // Point Sword in direction of cursor 
         if (!Input.GetMouseButton(1) && !Input.GetMouseButton(0))
         {
+            // calculates angle between cursor and center of screen 
             float angle = Mathf.Atan2(cursorPosition.y, cursorPosition.x) * Mathf.Rad2Deg - 90f;
-
+            // caculates a rotation of (angle) degrees
             Quaternion rotationVector = Quaternion.AngleAxis(angle, Vector3.forward);
-
+            // interpolates between staring angle and end angle 
             transform.rotation = Quaternion.Slerp(transform.rotation, rotationVector, rotationSpeed * Time.deltaTime); 
         }
        

@@ -25,7 +25,7 @@ public class SwordVelocity : MonoBehaviour
     {
         // Calculates sword speed
         swordVector = (transform.position - OriginalPosition).normalized;
-
+        // distance travelled over time 
         magnitudeOfVelocity = (int)((transform.position - OriginalPosition).magnitude / Time.deltaTime);
 
         OriginalPosition = transform.position;
@@ -35,7 +35,8 @@ public class SwordVelocity : MonoBehaviour
 
     void UpdateAnimation()
     {
-        // Changes sword sprite - based on sword speed 
+        // Changes sword sprite - based on sword speed / direction
+        // change names -- spriteRenderer.sprite = swordSprite0; 
         if (magnitudeOfVelocity < 10 )
         {
             spriteRenderer.sprite = swordSprite0;
@@ -50,41 +51,49 @@ public class SwordVelocity : MonoBehaviour
         }
         
         // Flips sword sprite to face direction of motion 
-        float playerToSword = transform.position.y - player.transform.position.y;
+        float playerToSwordVerticalDistance = transform.position.y - player.transform.position.y;
+        bool isSwordAbovePlayer;
+
+        if (playerToSwordVerticalDistance < -1)
+        {
+            isSwordAbovePlayer = false;
+        }
+        else
+        {
+            isSwordAbovePlayer = true;
+        }
         
-        if (playerToSword < -1)
+        if (isSwordAbovePlayer == false)
         {
             if (magnitudeOfVelocity >= 10)
             {
+                // set sprite left
                 if (swordVector.x < 0)
                 {
                     spriteRenderer.flipX = false;
                 }
+                //set sprite right
                 if (swordVector.x > 0)
                 {
                     spriteRenderer.flipX = true;
                 }
             }
         }
-        if (playerToSword > 1)
-        {
+        else 
+        {           
             if (magnitudeOfVelocity >= 10)
             {
+                // set sprite left
                 if (swordVector.x < 0)
                 {
                     spriteRenderer.flipX = true;
                 }
+                // set sprite right
                 if (swordVector.x > 0)
                 {
                     spriteRenderer.flipX = false;
                 }
             }
         }
-
-        
-        
-
-    }
-    
-
+    }   
 }

@@ -26,23 +26,28 @@ public class GoblinMovement : MonoBehaviour
     void FixedUpdate()
     {
         movementVector = FindMovementVector();
-        
-        Vector2 moveForce = movementVector * movementSpeed;
+
+       
 
         // Handles forces that apply to the player -- "KnockBack" and "Abilities" 
-        moveForce += forceToApply;
+
+        //adds knockback to movementVector
+        movementVector += forceToApply;
+
+        //decreases forceToApply 
         forceToApply /= forceDamping;
         
+        // sets forceToApply to 0 if very small 
         if (forceToApply.magnitude <= 0.01f)
         {
             forceToApply = Vector2.zero;
         }
-        goblinRigidBody2D.velocity = moveForce; 
-
+        
+        goblinRigidBody2D.velocity = movementVector;
         LookDirection(movementVector);
     }
 
-    
+    // flips goblin sprite to face the player 
     void LookDirection(Vector2 movemetVector)
     {       
         if (movemetVector.x < 0)
@@ -55,13 +60,14 @@ public class GoblinMovement : MonoBehaviour
         }       
     }
     
+    // finds direction of player relative to goblin
     Vector2 FindMovementVector()
     {   
         Vector2 playerPosition = playerTransform.position;
 
         Vector2 goboPosition = transform.position;
 
-        movementVector = (playerPosition - goboPosition).normalized;
+        movementVector = (playerPosition - goboPosition).normalized * movementSpeed;
 
         return movementVector;
     }

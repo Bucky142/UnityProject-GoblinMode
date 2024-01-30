@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 5649572045618796954}
   - component: {fileID: 946507009138562022}
   - component: {fileID: 6733718056172069848}
+  - component: {fileID: -2008865015633983379}
   - component: {fileID: 3145505920041529926}
   - component: {fileID: 3497546681938408967}
   - component: {fileID: 4133001628828614394}
   - component: {fileID: 632431088472682344}
   - component: {fileID: 437894938821611126}
   - component: {fileID: 5429744057113435615}
-  - component: {fileID: -2008865015633983379}
   m_Layer: 0
   m_Name: Gobo
   m_TagString: enemy
@@ -135,6 +135,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-2008865015633983379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3802608869216318434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa399253626d8aa43b73405499d47999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 946507009138562022}
+  attackRange: 2
 --- !u!114 &3145505920041529926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,15 +405,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-2008865015633983379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3802608869216318434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa399253626d8aa43b73405499d47999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
