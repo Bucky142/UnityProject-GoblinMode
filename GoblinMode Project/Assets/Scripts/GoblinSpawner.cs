@@ -56,8 +56,6 @@ public class GoblinSpawner : MonoBehaviour
             {
                 spawnTime = spawnTime - Time.timeSinceLevelLoad / (100000 * 60);
             }
-            
-            Debug.Log(spawnTime);
             currentSpawnTime = spawnTime;
         }
     }
@@ -76,16 +74,8 @@ public class GoblinSpawner : MonoBehaviour
                 RangeX = Random.Range(15, -15);
                 RangeY = Random.Range(15, -15);
             }
-
-            //Debug.Log(Mathf.Pow(RangeX, 2) + Mathf.Pow(RangeY, 2));
         }
-        Debug.Log((Mathf.Pow(RangeX, 2)));
-        //Debug.Log(RangeY);
-        Debug.Log(RangeX);
-
         spawnPosition = new Vector2(RangeX + player.transform.position.x, RangeY + player.transform.position.y);
-
-
         return spawnPosition;
     }
 }

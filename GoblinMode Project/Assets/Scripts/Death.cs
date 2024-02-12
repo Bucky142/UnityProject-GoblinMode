@@ -14,8 +14,11 @@ public class Death : MonoBehaviour
 
     private GoblinSFX GoblinSFX;
 
-    private GameObject killCountPanel;
-    private SetKillCount setKillCount;
+    
+    private SetCounters setCounters;
+
+    private GameObject EnemyLoot;
+    private EnemyDrops enemyDrops;
 
 
     // Start is called before the first frame update
@@ -33,8 +36,11 @@ public class Death : MonoBehaviour
         bloodObject = GameObject.Find("Blood Particles");
         bloodParticles = bloodObject.GetComponent<ParticleSystem>();
 
-        killCountPanel = GameObject.Find("KillCountPanel");
-        setKillCount = killCountPanel.GetComponent<SetKillCount>();
+        
+        setCounters = GameObject.Find("GameUI").gameObject.GetComponent<SetCounters>();
+
+        EnemyLoot = GameObject.Find("EnemyLoot");
+        enemyDrops = EnemyLoot.GetComponent<EnemyDrops>();
     }
 
     
@@ -60,7 +66,8 @@ public class Death : MonoBehaviour
             if (health <= 0)
             {
                 GoblinSFX.DeathSFX();
-                setKillCount.IncrementCounter();
+                setCounters.IncrementKillCounter();
+                enemyDrops.DropGold(transform);
             }
         }
 
