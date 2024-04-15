@@ -50,19 +50,15 @@ public class Death : MonoBehaviour
         // handles damage and enemy death
         if (collision.gameObject.tag == "hitBox")
         {
-
             SwordVelocity swordVelocity = collision.GetComponent<SwordVelocity>();
 
             int magnitudeOfVelocity = swordVelocity.magnitudeOfVelocity;
-
-            //Debug.Log(magnitudeOfVelocity);
 
             if (magnitudeOfVelocity > 20)
             {
                 takeDamage(20);              
             }
-            
-
+            // enemy death 
             if (health <= 0)
             {
                 GoblinSFX.DeathSFX();
@@ -70,7 +66,6 @@ public class Death : MonoBehaviour
                 enemyDrops.DropGold(transform);
             }
         }
-
     }
 
     private void takeDamage(float damage)

@@ -10,9 +10,9 @@ public class SwordVelocity : MonoBehaviour
     public int magnitudeOfVelocity;
     private GameObject player;
 
-    public Sprite swordSprite0;
-    public Sprite swordSprite2;
-    public Sprite swordSprite3;
+    public Sprite stillSwordSprite;
+    public Sprite movingSwordSprite;
+    public Sprite fastMovingSwordSprite;
 
     public SpriteRenderer spriteRenderer;
 
@@ -36,25 +36,24 @@ public class SwordVelocity : MonoBehaviour
     void UpdateAnimation()
     {
         // Changes sword sprite - based on sword speed / direction
-        // change names -- spriteRenderer.sprite = swordSprite0; 
         if (magnitudeOfVelocity < 10 )
         {
-            spriteRenderer.sprite = swordSprite0;
+            spriteRenderer.sprite = stillSwordSprite;
         }      
-        if ((magnitudeOfVelocity >= 20))
-        {
-            spriteRenderer.sprite = swordSprite2;
-        }
         if ((magnitudeOfVelocity >= 10) && (magnitudeOfVelocity < 20))
         {
-            spriteRenderer.sprite = swordSprite3;
+            spriteRenderer.sprite = movingSwordSprite;
         }
-        
+        if ((magnitudeOfVelocity >= 20))
+        {
+            spriteRenderer.sprite = fastMovingSwordSprite;
+        }
+
         // Flips sword sprite to face direction of motion 
         float playerToSwordVerticalDistance = transform.position.y - player.transform.position.y;
         bool isSwordAbovePlayer;
 
-        if (playerToSwordVerticalDistance < -1)
+        if (playerToSwordVerticalDistance < 0)
         {
             isSwordAbovePlayer = false;
         }
@@ -72,7 +71,7 @@ public class SwordVelocity : MonoBehaviour
                 {
                     spriteRenderer.flipX = false;
                 }
-                //set sprite right
+                // set sprite right
                 if (swordVector.x > 0)
                 {
                     spriteRenderer.flipX = true;

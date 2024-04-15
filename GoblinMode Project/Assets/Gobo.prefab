@@ -164,7 +164,7 @@ MonoBehaviour:
   movementSpeed: 2
   movementVector: {x: 0, y: 0}
   forceToApply: {x: 0, y: 0}
-  forceDamping: 1.2
+  forceDamping: 1.4
 --- !u!58 &3497546681938408967
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -231,7 +231,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 0
+  Priority: 141
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -327,7 +327,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 0
+  Priority: 256
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

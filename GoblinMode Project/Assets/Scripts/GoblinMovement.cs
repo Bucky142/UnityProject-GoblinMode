@@ -22,12 +22,9 @@ public class GoblinMovement : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
     }
 
-    
     void FixedUpdate()
     {
         movementVector = FindMovementVector();
-
-       
 
         // Handles forces that apply to the player -- "KnockBack" and "Abilities" 
 

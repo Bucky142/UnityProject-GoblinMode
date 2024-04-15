@@ -23,14 +23,19 @@ public class playerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Handles base movement 
+        // Handles base movement - W, A, S, D 
         Vector2 movementVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         Vector2 moveForce = movementVector * movementSpeed;
 
         // Handles forces that apply to the player -- "KnockBack" and "Abilities" 
+
+        //adds knockback to movementVector
         moveForce += forceToApply;
+
+        //decreases forceToApply 
         forceToApply /= forceDamping;
 
+        // sets forceToApply to 0 if very small 
         if (forceToApply.magnitude <= 0.01f)
         {
             forceToApply = Vector2.zero;

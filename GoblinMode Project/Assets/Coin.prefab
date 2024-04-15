@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba9167cd6402254f9a51277ac4a67e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldPickUpRange: 5
+  goldPickUpRange: 3
 --- !u!58 &5154954642902739700
 CircleCollider2D:
   m_ObjectHideFlags: 0

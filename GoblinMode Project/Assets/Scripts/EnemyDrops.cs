@@ -17,9 +17,7 @@ public class EnemyDrops : MonoBehaviour
     public void DropGold(Transform enemyTransform)
     {
         
-        
-
-        int goldDropChance = 50; // 20%
+        int goldDropChance = 50; // 1% - 100%
         int rand = Random.Range(1, 100);
 
         if (rand <= goldDropChance)
@@ -27,7 +25,6 @@ public class EnemyDrops : MonoBehaviour
             GameObject coinClone = Instantiate(Coin, gameObject.transform);
             
             coinClone.transform.position = enemyTransform.position;
-            coinRigidBody2D = coinClone.GetComponent<Rigidbody2D>();
 
             //chance for dropping multiple coins 
             DropGold(enemyTransform);

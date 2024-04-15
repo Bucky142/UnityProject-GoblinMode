@@ -6,41 +6,52 @@ using UnityEngine;
 
 public class LoginScript : MonoBehaviour
 {
-    private TMP_InputField usernameInput;
-    private TMP_InputField passwordInput;
+    private TMP_InputField usernameInputField;
+    private TMP_InputField passwordInputField;
+    private TextMeshProUGUI errorTextMesh;
+
+    public GameObject MainMenu;
+    public GameObject LoginMenu;
+
+    public string username;
     // Start is called before the first frame update
     void Start()
     {
-        usernameInput = GameObject.Find("UsernameInput").gameObject.GetComponent<TMP_InputField>();
-        passwordInput = GameObject.Find("PasswordInput").gameObject.GetComponent<TMP_InputField>();
+        usernameInputField = GameObject.Find("UsernameInput").gameObject.GetComponent<TMP_InputField>();
+        passwordInputField = GameObject.Find("PasswordInput").gameObject.GetComponent<TMP_InputField>();
+        errorTextMesh = GameObject.Find("ErrorText").gameObject.GetComponent<TextMeshProUGUI>();
     }
 
     public void Login()
     {
         string filePath = Application.dataPath + "/UserAccounts";
-        string[] UserAccountDetails = File.ReadAllLines(filePath);
+        string[] userAccountDetails = File.ReadAllLines(filePath);
 
-        string username = usernameInput.text;
-        string password = passwordInput.text;
-        
-        for(int i = 0; i <= UserAccountDetails.Length -1; i += 2)
+        string usernameInput = usernameInputField.text;
+        string passwordInput = passwordInputField.text;
+
+        bool isLogedIn = false;
+
+        // Usernames and passwords are stored alternately 
+        // Loops through usernames in userAccountDetails 
+        for(int i = 0; i <= userAccountDetails.Length -1; i += 2)
         {
-            if(username == UserAccountDetails[i])
+            if (usernameInput == userAccountDetails[i])
             {
-                if(password == UserAccountDetails[i + 1])
+                if (passwordInput == userAccountDetails[i + 1])
                 {
-                    Debug.Log("Login Successful " + i);
-                    i = UserAccountDetails.Length;
-                }
-                else
-                {
-                    Debug.Log("Login Unsuccessful " + i);
+                    isLogedIn = true;
+                    errorTextMesh.text = "";
+                    LoginMenu.SetActive(false);
+                    MainMenu.SetActive(true);
+                    username = usernameInput;
+                    break;
                 }
             }
-            else
-            {
-                Debug.Log("Login Unsuccessful " + i);
-            }
+        }
+        if (isLogedIn == false)
+        {
+            errorTextMesh.text = "username or password is incorrect";
         }
     }
 }

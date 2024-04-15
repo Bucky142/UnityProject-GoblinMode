@@ -23,9 +23,8 @@ public class GoboAttack : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            playerHealth.takeDamage(Random.Range(5, 15));
+            playerHealth.TakeDamage(Random.Range(5, 15));
         }
-        
     }
 
     void FixedUpdate()
@@ -42,6 +41,7 @@ public class GoboAttack : MonoBehaviour
         }
 
         VerticalDistanceToPlayer = playerTransform.position.y - transform.position.y;
+
         //sets direction of attack animation
         //is player above or below player 
         if (VerticalDistanceToPlayer < 0)

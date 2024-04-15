@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Random = UnityEngine.Random;
 
 public class GoblinSpawner : MonoBehaviour
 {
@@ -16,10 +18,9 @@ public class GoblinSpawner : MonoBehaviour
     private float currentSpawnTime;
     
     public float healthBarScale = 0.007f;
-    float RangeX = 0;
-    float RangeY = 0;
+    private int RangeX;
+    private int RangeY; 
 
-    float radiusSquared = Mathf.Pow(15, 2) + Mathf.Pow(15, 2);
     public GameObject healthBarCanvas;
     // Start is called before the first frame update
     void Start()
@@ -31,18 +32,9 @@ public class GoblinSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        
-        
-
-        //position = new Vector2(Mathf.Pow(RangeX,2), RangeYSquared);
-
-        // Creates a random position in around the player 
-        //position = new Vector3(Random.Range(RangeX, RangeX + Random.Range(5, -5)), Random.Range(RangeY, RangeY + Random.Range(5,-5)));
-
         currentSpawnTime -= Time.deltaTime;
 
-        // Instantiates Object and childen
+        // Instantiates Object and childen - healthbar object added above the goblin 
         if (currentSpawnTime <= 0)
         {
             GameObject goblinClone = Instantiate(Goblin, SpawnPosition(), new Quaternion(0, 0, 0, 0));   
@@ -52,6 +44,7 @@ public class GoblinSpawner : MonoBehaviour
             healthBarClone.transform.position = goblinClone.transform.position + new Vector3(0,0.6f,0);
             healthBarClone.transform.localScale = new Vector3(healthBarScale, healthBarScale, healthBarScale);
 
+            // reduce the spawnTime of the goblins based on the time survived 
             if (spawnTime > 0.001)
             {
                 spawnTime = spawnTime - Time.timeSinceLevelLoad / (100000 * 60);
@@ -61,20 +54,18 @@ public class GoblinSpawner : MonoBehaviour
     }
 
     Vector2 SpawnPosition()
-    {
-        RangeX = Random.Range(15, -15);
-        RangeY = Random.Range(15, -15);
-        // X^2 + Y^2 = r^2
-        while (Mathf.Pow(RangeX, 2) + Mathf.Pow(RangeY, 2) > radiusSquared)
+    {   // generate a point in a box of 24 width and height, centered at 0
+        RangeX = Random.Range(12, -12);
+        RangeY = Random.Range(12, -12);
+
+        // X^2 + Y^2 = r^2 
+        // is X^2 + Y^2 smaller than the radius^2 (106) of a circle 
+        while (Mathf.Pow(RangeX, 2) + Mathf.Pow(RangeY, 2) < 106)
         {
-            RangeX = Random.Range(15, -15);
-            RangeY = Random.Range(15, -15);
-            while (Mathf.Pow(RangeX, 2) + Mathf.Pow(RangeY, 2) < 25)
-            {
-                RangeX = Random.Range(15, -15);
-                RangeY = Random.Range(15, -15);
-            }
+            RangeX = Random.Range(12, -12);
+            RangeY = Random.Range(12, -12);
         }
+        // add generated point with player position
         spawnPosition = new Vector2(RangeX + player.transform.position.x, RangeY + player.transform.position.y);
         return spawnPosition;
     }

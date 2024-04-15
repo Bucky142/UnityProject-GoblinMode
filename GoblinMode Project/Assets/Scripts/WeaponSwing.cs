@@ -20,11 +20,6 @@ public class WeaponSwing : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        Vector2 playerTransform2D = transform.position;
-        
-        // In-game cursor
-        crosshair.transform.position = cursorPosition + playerTransform2D;
         // Auto swing sowrd 
         if (Input.GetMouseButton(1))
         {
@@ -32,9 +27,11 @@ public class WeaponSwing : MonoBehaviour
         }
         if (Input.GetMouseButton(0))
         {
-            transform.Rotate(0, 0,-autoSwingVelocity, Space.Self);
+            transform.Rotate(0, 0,-autoSwingVelocity, Space.World);
         }
 
+        Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        
         // Point Sword in direction of cursor 
         if (!Input.GetMouseButton(1) && !Input.GetMouseButton(0))
         {
@@ -45,6 +42,10 @@ public class WeaponSwing : MonoBehaviour
             // interpolates between staring angle and end angle 
             transform.rotation = Quaternion.Slerp(transform.rotation, rotationVector, rotationSpeed * Time.deltaTime); 
         }
-       
+
+        // replace cursor
+        Vector2 playerTransform2D = transform.position;
+        crosshair.transform.position = cursorPosition + playerTransform2D;
+
     }
 }

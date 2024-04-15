@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
         GameOver = GameObject.Find("GameOverScreen");
         GameOver.SetActive(false);  
     }
-    public void takeDamage(int damage)
+    public void TakeDamage(int damage)
     { 
         health -= damage;
 
